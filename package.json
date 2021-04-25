@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "yarn serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@jsmini/clone": "^0.4.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "lodash-core": "^4.17.19",
+    "normalize.css": "^8.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
