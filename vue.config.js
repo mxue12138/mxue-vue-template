@@ -1,5 +1,16 @@
+const CompressionPlugin = require('compression-webpack-plugin')
+
 module.exports = {
   configureWebpack: {
+    plugins: [
+      new CompressionPlugin({
+        algorithm: 'gzip', // 使用gzip压缩
+        test: /\.js$|\.html$|\.css$|\.woff2$|\.woff$|\.ttf$|\.svg$/, // 匹配文件名
+        filename: '[path][base].gz[query]',
+        minRatio: 1,
+        threshold: 1024 * 10
+      })
+    ],
     devtool: process.env.NODE_ENV === 'development' ? 'source-map' : false
   },
   css: {
